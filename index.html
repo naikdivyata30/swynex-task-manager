@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWYNEX Task Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>SWYNEX</h1>
+            <p>Organize your day. Achieve your goals.</p>
+        </header>
+
+        <section class="welcome">
+            <h2>My Task Manager</h2>
+            <p>Manage your daily tasks easily.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+        </section>
+
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                >
+
+                <select id="priority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium">Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <button type="submit">+ Add Task</button>
+            </form>
+
+            <p id="errorMessage"></p>
+        </section>
+
+        <section class="task-section">
+
+            <div class="task-heading">
+                <h2>My Tasks</h2>
+
+                <select id="filter">
+                    <option value="All">All Tasks</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <div id="taskList"></div>
+
+            <p id="emptyMessage">No tasks available. Add your first task!</p>
+
+        </section>
+
+        <footer>
+            <p>© 2026 SWYNEX | Learn. Build. Get Verified.</p>
+        </footer>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
